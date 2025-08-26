@@ -188,7 +188,7 @@ sudo systemctl restart systemd-timesyncd
 ### Beispiel: User rover auf dem (Raspberry Pi) Client minirover
 
 ```bash
-# auf dem Client, meist schon installiert
+# auf Client ud Server, meist unnötig, da schon installiert
 sudo apt install openssh-server
 # auf dem Entwicklungsrechner
 ssh-keygen -t ed25519 -C "name-des-key"
