@@ -184,12 +184,16 @@ sudo systemctl restart systemd-timesyncd
 
 ---
 
-## 🔐 SSH-Zugang und Key-Installation
+## 🔐 SSH-Zugang und Key-Installation (Linux)
+### Beispiel: User rover auf dem (Raspberry Pi) Client minirover
 
 ```bash
+# auf dem Client, meist schon installiert
 sudo apt install openssh-server
-ssh-keygen -t ed25519 -C "mein-key"
-ssh-copy-id user@192.168.x.x
+# auf dem Entwicklungsrechner
+ssh-keygen -t ed25519 -C "name-des-key"
+# Ggf. Dateiname und IP des Zielsystems anpassen
+ssh-copy-id -i ./.ssh/id_ed25519 rover@minirover.local
 ```
 
 ---
