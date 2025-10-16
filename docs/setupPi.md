@@ -15,8 +15,9 @@ sudo dd bs=1M count=11000 if=/dev/sde of=~/raspberry-pi.img
 Oder mit Fortschrittsanzeige und Hash:
 
 ```bash
-sudo apt install dcfldd
-sudo dcfldd bs=1M count=11000 if=/dev/sdd of=~/raspberry-pi.img hash=md5
+# sudo apt install dcfldd
+sudo dcfldd bs=1M count=11000 if=/dev/sdc of=./raspberry-pi.img hash=md5
+md5sum raspberry-pi.img
 ```
 
 ### Image verkleinern
